@@ -1,0 +1,3 @@
+logging.level:
+  com.festiveoffers.offertransaction.controller: WARN
+  com.festiveoffers.offertransaction.service: DEBUG
