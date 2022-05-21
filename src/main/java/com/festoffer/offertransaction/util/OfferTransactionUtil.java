@@ -1,4 +1,4 @@
-package com.festoffer.offertransaction.cleancode;
+package com.festoffer.offertransaction.util;
 
 import com.festoffer.offertransaction.model.OfferTransactionModel;
 import com.festoffer.offertransaction.offertransactionrequest.OfferTransactionRequest;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class CleanCode {
+public class OfferTransactionUtil {
     @Autowired
     private OffersRepository offersRepository;
 

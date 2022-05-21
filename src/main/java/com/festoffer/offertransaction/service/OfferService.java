@@ -1,9 +1,8 @@
 package com.festoffer.offertransaction.service;
 
-import com.festoffer.offertransaction.cleancode.CleanCode;
+import com.festoffer.offertransaction.util.OfferTransactionUtil;
 import com.festoffer.offertransaction.model.OfferTransactionModel;
 import com.festoffer.offertransaction.offertransactionrequest.OfferTransactionRequest;
-import com.festoffer.offertransaction.offertransactionresponse.OfferTransactionResponse;
 import com.festoffer.offertransaction.repository.OffersRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ public class OfferService {
     private OffersRepository offersRepository;
 
     @Autowired
-    private CleanCode cleanCode;
+    private OfferTransactionUtil offerTransactionUtil;
 
     public List<OfferTransactionModel> getAllOffers() {
         return offersRepository.findAll();
@@ -27,7 +26,7 @@ public class OfferService {
     public OfferTransactionModel applyOffer(OfferTransactionRequest offerTransactionRequest) {
         log.debug("debug message Inside saveRequest method of OfferTransactionService");
         log.info("Inside saveRequest new method of OfferTransactionService");
-        OfferTransactionModel otm = cleanCode.applyOffer(offerTransactionRequest);
+        OfferTransactionModel otm = offerTransactionUtil.applyOffer(offerTransactionRequest);
         return otm;
     }
 }
